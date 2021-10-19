@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+using namespace std; 
+
+int main ()
+{
+    string FirstName; 
+    string LastName; 
+    string PhoneNo; 
+    string Position; 
+    string Company; 
+
+    cout<< "Enter your first name" << endl; 
+    cin >> FirstName;
+    cout<< "Enter your last name" << endl; 
+    cin >> LastName;
+    cout<< "Enter your Phone Number (Canadian)\n Please enter 10 digits only" << endl; 
+    cin >> PhoneNo;
+    if(PhoneNo.length()==10)
+    {
+        cout<< "Enter your Position at Company" << endl; 
+        cin >> Position;
+        cout<< "Enter your Compnay Name" << endl; 
+        cin >> Company;
+        
+        char number[11];
+        strcpy(number, PhoneNo.c_str());
+        cout<< "\t" << FirstName << " " << LastName << endl;
+        cout<< "\t" << "Phone No: - +1(" <<number[0]<<number[1]<<number[2]<<")"<<number[3]<<number[4]<<number[5]<<"-"<<number[6]<<number[7]<<number[8]<<number[9]<< endl; 
+        cout<< "\t" << Position << " at " << Company << endl;
+    }
+    else {cout<<"Wrong Input"<<endl;}
+    
+    
+      
+    
+    return (0);
+}
